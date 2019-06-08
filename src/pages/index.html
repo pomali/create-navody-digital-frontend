@@ -1,0 +1,17 @@
+<!-- index.nunjucks -->
+{% extends "default.html" %}
+{% block content %}
+
+<h1>Hello</h1>
+
+{% from "_custom/searchbar/macro.njk" import govukSearchbar %}
+
+{{ govukSearchbar({
+  "tag": {
+    "text": "alpha"
+  },
+  "html": "This is a new service - your <a href=\"#\" class=\"govuk-link\">feedback</a> will help us to improve it."
+}) }}
+
+{% endblock %}
+

@@ -1,6 +1,6 @@
 {
   "name": "create-navody-frontend",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Starter kit for static frontends generated from ninja templates based on navody-frontend",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

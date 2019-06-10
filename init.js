@@ -16,6 +16,7 @@ if (projectName){
 
   // + install dependencies
   // + update package.json
+  // + change package.json app name
 
 } else {
   throw('Destination not defined')

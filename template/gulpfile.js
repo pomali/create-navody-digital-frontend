@@ -26,7 +26,7 @@ var siteOutput = './dist';
 var input = './src/scss/*.scss';
 var inputMain = './src/scss/main.scss';
 var output = siteOutput + '/css';
-var inputTemplates = './src/pages/*.html';
+var inputTemplates = './src/pages/*.{html,njk}';
 var sassOptions = { outputStyle: 'expanded', includePaths: 'node_modules' };
 var autoprefixerOptions = { browsers: ['last 2 versions', '> 5%', 'Firefox ESR'] };
 var sassdocOptions = { dest: siteOutput + '/sassdoc' };
@@ -70,7 +70,7 @@ gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src(inputTemplates)
   // Renders template with nunjucks
-  .pipe(nunjucksRender())
+  .pipe(nunjucksRender({ext: 'html'}))
   // output files in dist folder
   .pipe(gulp.dest(siteOutput))
 });
